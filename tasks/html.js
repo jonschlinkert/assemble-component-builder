@@ -82,15 +82,4 @@ module.exports = function (assemble, config, browserSync){
     done();
   });
 
-  // expected result :
-  // - load all the files required for assemble
-  // - build all the components
-  // - create a new data instance from the dist folder
-  // - build the index html page
-  // - change on .hbs or .json are reflected during the watch task
-
-  // defect :
-  // - when the task html.index task is added to the stream,
-  //   data are not updated anymore
-
 };
