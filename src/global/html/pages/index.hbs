@@ -1,0 +1,16 @@
+---
+layout: base
+---
+
+{{#each htmls}}
+  <div>
+    {{title}}
+    <ul>
+    {{#each items}}
+      <li>
+        <a href="{{href}}">{{title}}</a>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+{{/each}}
