@@ -23,38 +23,6 @@ module.exports = function (assemble, config, browserSync){
     done();
   });
 
-  assemble.task('html.load.index', function(done){
-    var data = {};
-    var dataName = 'htmls';
-    var dataContent = [];
-    var temp = {};
-
-    glob('dist/html/**/*.html', function(err, files){
-      if(err) done(err);
-      files.map(function(file){
-        var href = file.replace('dist/html/', '');
-        var category = href.split('/')[0];
-        var title = path.basename(href, '.html').replace('-', ' ');
-
-        if (title !== 'index') {
-          temp[category] = temp[category] || [];
-          temp[category].push({
-            href: href,
-            title: title
-          });
-        }
-      });
-
-      for (var i in temp){
-        dataContent.push({title: i, items: temp[i]});
-      }
-
-      data[dataName] = dataContent;
-      assemble.data(data);
-      done();
-    });
-  })
-
   assemble.task('html.build', function(){
     return assemble.toStream('pages')
                   .pipe(assemble.renderFile())
@@ -62,21 +30,9 @@ module.exports = function (assemble, config, browserSync){
                   .pipe(assemble.dest('dist/html'));
   });
 
-  assemble.task('html.build.index', function(){
-    return assemble.src('./src/**/index.hbs')
-                  .pipe(assemble.renderFile())
-                  .pipe(rename({dirname: '', extname: '.html'}))
-                  .pipe(assemble.dest('dist/html/'));
-
-  });
-
   assemble.task('html', [
-
     'html.load',
-    'html.build',
-    'html.load.index',
-    'html.build.index'
-
+    'html.build'
   ], function(done){
     browserSync.reload();
     done();
