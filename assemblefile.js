@@ -25,7 +25,9 @@ config.versionString = '/*! '+ packageJson.name +' */\n' +
 // Assemble default task
 assemble.task('default', [
 	'clean',
-	'html',
+], assemble.parallel([
+  'html'
+]), [
 	'browserSync',
 	'watch'
 ]);

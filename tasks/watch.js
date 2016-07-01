@@ -21,7 +21,7 @@ module.exports = function (assemble, config, browserSync){
       'clean.styles',
       'styles'
     ], function(done){
-       browserSync.stream();
+       browserSync.reload();
        done();
     });
 
