@@ -13,5 +13,11 @@ module.exports = function (assemble, config, browserSync){
       'dist/html/'
     ]);
   });
+  
+  assemble.task('clean.styles', function(){
+    return del([
+      'dist/css/'
+    ]);
+  });
 
 };
