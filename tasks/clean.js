@@ -4,7 +4,13 @@ module.exports = function (assemble, config, browserSync){
 
   assemble.task('clean', function(){
     return del([
-      './dist/'
+      'dist/'
+    ]);
+  });
+
+  assemble.task('clean.html', function(){
+    return del([
+      'dist/html/'
     ]);
   });
 
