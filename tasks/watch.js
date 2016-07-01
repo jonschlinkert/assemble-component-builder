@@ -8,8 +8,12 @@ module.exports = function (assemble, config, browserSync){
       'src/**/*.hbs',
       'src/**/data/*.json'
     ], [
+      'clean.html',
       'html'
-    ]);
+    ], function(done){
+       browserSync.reload();
+       done();
+    });
 
   });
 
