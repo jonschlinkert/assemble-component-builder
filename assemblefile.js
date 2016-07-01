@@ -16,9 +16,11 @@ taskList.forEach(function (taskFile) {
 });
 
 // Set config.versionString
-config.versionString = '/*! Australia Post */\n' +
-											 '/*! Version: '+ JSON.parse(fs.readFileSync('./package.json')).version +' */\n' +
-											 '/*! Created: ' + new Date() + ' */\n';
+var packageJson = JSON.parse(fs.readFileSync('./package.json'));
+
+config.versionString = '/*! '+ packageJson.name +' */\n' +
+											 '/*! Version: '+ packageJson.version +' */\n' +
+											 '/*! Created: '+ new Date() +' */\n';
 
 // Assemble default task
 assemble.task('default', [
