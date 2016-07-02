@@ -6,7 +6,8 @@ module.exports = function (assemble, config, browserSync){
 
     assemble.watch([
       'src/**/*.hbs',
-      'src/**/data/*.json'
+      'src/**/data/*.json',
+      '!src/apps/**/templates/**/*.hbs'
     ], [
       'clean.html',
       'html'
@@ -26,12 +27,24 @@ module.exports = function (assemble, config, browserSync){
     });
 
     assemble.watch([
-      './src/global/js/namespace.js',
-      './src/global/js/vendors/**/*.js',
-      './src/global/js/helpers/**/*.js',
-      './src/components/**/js/*.js'
+      'src/global/js/namespace.js',
+      'src/global/js/vendors/**/*.js',
+      'src/global/js/helpers/**/*.js',
+      'src/components/**/js/*.js'
     ], [
+      'clean.scripts',
       'scripts'
+    ], function(done){
+       browserSync.reload();
+       done();
+    });
+
+    assemble.watch([
+      'src/apps/**/js/**/*.js',
+      'src/apps/**/templates/**/*.hbs',
+      '!src/apps/**/templates/*.js'
+    ], [
+      'apps'
     ], function(done){
        browserSync.reload();
        done();
