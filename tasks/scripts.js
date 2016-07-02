@@ -22,7 +22,7 @@ module.exports = function (assemble, config, browserSync){
               message: 'There is a JS error, please look at your terminal for details'
             }))
             .pipe(concat('main.js'))
-            .pipe(babel({compact: false}))
+            .pipe(babel({compact: true}))
             .pipe(injectString.prepend(config.versionString))
             .pipe(assemble.dest('./dist/js/'))
             .pipe(browserSync.stream());
