@@ -15,6 +15,16 @@ module.exports = function (assemble, config, browserSync){
        done();
     });
 
+    assemble.watch([
+      'src/**/*.scss',
+    ], [
+      'clean.styles',
+      'styles'
+    ], function(done){
+       browserSync.reload();
+       done();
+    });
+
   });
 
 };

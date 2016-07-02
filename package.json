@@ -15,7 +15,14 @@
     "del": "^2.2.1",
     "fs": "0.0.2",
     "glob": "^7.0.5",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-inject-string": "^1.1.0",
+    "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
-    "path": "^0.12.7"
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "handlebars-helpers": "^0.6.1",
+    "path": "^0.12.7",
+    "sass-module-importer": "^1.2.1"
   }
 }

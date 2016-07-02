@@ -12,20 +12,24 @@ var taskPath = './tasks/';
 var taskList = fs.readdirSync(taskPath);
 
 taskList.forEach(function (taskFile) {
-	require(taskPath + taskFile)(assemble, config, browserSync);
+  require(taskPath + taskFile)(assemble, config, browserSync);
 });
 
 // Set config.versionString
-config.versionString = '/*! Australia Post */\n' +
-											 '/*! Version: '+ JSON.parse(fs.readFileSync('./package.json')).version +' */\n' +
-											 '/*! Created: ' + new Date() + ' */\n';
+var packageJson = JSON.parse(fs.readFileSync('./package.json'));
+
+config.versionString = '/*! '+ packageJson.name +' */\n' +
+                       '/*! Version: '+ packageJson.version +' */\n' +
+                       '/*! Created: '+ new Date() +' */\n';
 
 // Assemble default task
 assemble.task('default', [
-	'clean',
-	'html',
-	'browserSync',
-	'watch'
+  'clean',
+], assemble.parallel([
+  'html', 'styles'
+]), [
+  'browserSync',
+  'watch'
 ]);
 
 
