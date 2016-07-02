@@ -25,6 +25,18 @@ module.exports = function (assemble, config, browserSync){
        done();
     });
 
+    assemble.watch([
+      './src/global/js/namespace.js',
+      './src/global/js/vendors/**/*.js',
+      './src/global/js/helpers/**/*.js',
+      './src/components/**/js/*.js'
+    ], [
+      'scripts'
+    ], function(done){
+       browserSync.reload();
+       done();
+    });
+
   });
 
 };
