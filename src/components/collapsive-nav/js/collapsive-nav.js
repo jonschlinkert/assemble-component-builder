@@ -1,7 +1,7 @@
 ;(function($, COMPONENTS, HELPERS) {
   'use strict';
 
-  COMPONENTS.<%name:js%> = (function(){
+  COMPONENTS.collapsiveNav = (function(){
 
     // private function are expected
     // to start by an underscore
@@ -20,6 +20,6 @@
 
   })();
 
-  COMPONENTS.<%name:js%>.init();
+  COMPONENTS.collapsiveNav.init();
 
 })(jQuery, apAEM.COMPONENTS, apAEM.HELPERS);

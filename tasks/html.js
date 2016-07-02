@@ -50,7 +50,8 @@ module.exports = function (assemble, config, browserSync){
       'src/**/*.hbs',
       '!src/**/layouts/*.hbs',
       '!src/**/partials/*.hbs',
-      '!src/apps/**/templates/**/*.hbs'
+      '!src/**/demo-component/**/*.hbs',
+      '!src/**/templates/**/*.hbs'
     ]);
     assemble.data({
       'navigation': navigationData

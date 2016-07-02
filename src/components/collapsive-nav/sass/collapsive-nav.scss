@@ -6,10 +6,10 @@
 * Go to src/global/sass
 * and paste the next line at the right place:
 
-@import '../../components/<%name%>/sass/<%name%>';
+@import '../../components/collapsive-nav/sass/collapsive-nav';
 
 */
 
-.<%name%>-title {
+.collapsive-nav-title {
   color: red;
 }

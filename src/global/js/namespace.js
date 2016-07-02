@@ -1,4 +1,4 @@
-var acb = {};
-    acb.COMPONENTS = {};
-    acb.HELPERS = {};
+var apAEM = {};
+    apAEM.COMPONENTS = {};
+    apAEM.HELPERS = {};
 

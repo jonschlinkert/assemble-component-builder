@@ -45,16 +45,4 @@ assemble.task('prod',
   ]
 );
 
-
-assemble.task('create', function(done){
-  if (typeof assemble.options.component !== 'undefined') {
-    assemble.build('create.component', function(err) {
-      if (err) throw err;
-    });
-  }
-  done();
-});
-
-
-
 module.exports = assemble;

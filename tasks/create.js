@@ -1,18 +1,37 @@
 module.exports = function (assemble, config, browserSync){
 
-  assemble.task('create.component', function(){
+  var rename = require('gulp-rename');
+  var replace = require('gulp-replace');
 
-    // var name = assemble.options.component.replace(' ','-');
-    // var dest = 'src/components/' + name;
-    // var demo = 'src/global/docs/demo-component/';
+  assemble.task('create', function(){
+    if (typeof assemble.options.component !== 'undefined') {
 
-    // console.log(dest);
+      function cap(string) {
+        return string.split(/-| /).map(function(str, i){
+          if (i!==0) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+          }
+          return str;
+        }).join('');
+      }
 
-    return assemble.src('src/global/docs/demo-component/**/*')
-                  .pipe(assemble.dest('src/components/'));
+      var name = assemble.options.component;
+      var nameAll = name.replace(/ /g, '-');
+      var nameJs = cap(name);
 
-
+      return assemble.src('src/global/docs/demo-component/**/*')
+                    .pipe(replace(/<%name%>/g, nameAll))
+                    .pipe(replace(/<%name:js%>/g, nameJs))
+                    .pipe(rename(function(path){
+                      if (path.extname !== '') {
+                        path.basename = nameAll;
+                      }
+                    }))
+                    .pipe(assemble.dest('src/components/'+ nameAll));
+    }
   });
-
 };
+
+
+
 
