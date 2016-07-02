@@ -1,0 +1,22 @@
+;(function($, COMPONENTS, HELPERS) {
+  'use strict';
+
+  COMPONENTS.[name] = (function(){
+
+    function _private(){
+
+    };
+
+    function public(){
+
+    };
+
+    return {
+      init: public
+    };
+
+  });
+
+  COMPONENTS.[name].init();
+
+})(jQuery, acb.COMPONENTS, acb.HELPERS);

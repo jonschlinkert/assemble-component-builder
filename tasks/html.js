@@ -49,7 +49,8 @@ module.exports = function (assemble, config, browserSync){
     assemble.pages([
       'src/**/*.hbs',
       '!src/**/layouts/*.hbs',
-      '!src/**/partials/*.hbs'
+      '!src/**/partials/*.hbs',
+      '!src/apps/**/templates/**/*.hbs'
     ]);
     assemble.data({
       'navigation': navigationData
@@ -63,12 +64,12 @@ module.exports = function (assemble, config, browserSync){
                   .pipe(rename(function (file) {
                     // convert extension to html
                     file.extname = '.html'
-                    // for index.html, change the destination 
+                    // for index.html, change the destination
                     // to dist/html
                     if(file.basename == 'index') {
                       file.dirname = '';
                     }
-                  }))    
+                  }))
                   .pipe(assemble.dest('dist/html'));
   });
 

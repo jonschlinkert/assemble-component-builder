@@ -23,23 +23,38 @@ config.versionString = '/*! '+ packageJson.name +' */\n' +
                        '/*! Created: '+ new Date() +' */\n';
 
 // Assemble default task
-assemble.task('default', [
-  'clean',
-], assemble.parallel([
-  'html', 'styles', 'scripts', 'apps'
-]), [
-  'browserSync',
-  'watch'
-]);
+assemble.task('default',
+  [
+    'clean',
+  ], assemble.parallel([
+    'html', 'styles', 'scripts', 'apps'
+  ]), [
+    'browserSync',
+    'watch'
+  ]
+);
 
 // Assemble production task
-assemble.task('prod', [
-  'clean',
-], assemble.parallel([
-  'html', 'styles', 'scripts', 'apps'
-]), [
-  'minification'
-]);
+assemble.task('prod',
+  [
+    'clean',
+  ], assemble.parallel([
+    'html', 'styles', 'scripts', 'apps'
+  ]), [
+    'minification'
+  ]
+);
+
+
+assemble.task('create', function(done){
+  if (typeof assemble.options.component !== 'undefined') {
+    assemble.build('create.component', function(err) {
+      if (err) throw err;
+    });
+  }
+  done();
+});
+
 
 
 module.exports = assemble;
