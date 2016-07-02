@@ -32,7 +32,14 @@ assemble.task('default', [
   'watch'
 ]);
 
-
+// Assemble production task
+assemble.task('prod', [
+  'clean',
+], assemble.parallel([
+  'html', 'styles', 'scripts', 'apps'
+]), [
+  'minification'
+]);
 
 
 module.exports = assemble;
