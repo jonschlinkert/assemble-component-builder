@@ -1,7 +1,7 @@
 ;(function($, COMPONENTS, HELPERS) {
   'use strict';
 
-  COMPONENTS.[name] = (function(){
+  COMPONENTS.[[name]] = (function(){
 
     function _private(){
 
@@ -17,6 +17,6 @@
 
   });
 
-  COMPONENTS.[name].init();
+  COMPONENTS.[[name]].init();
 
 })(jQuery, acb.COMPONENTS, acb.HELPERS);
