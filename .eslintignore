@@ -1,0 +1,3 @@
+src/global/js/vendor
+src/apps/core/js/templates.js
+dist/**/*.js

@@ -1,5 +1,5 @@
 import Handlebars from 'handlebars/runtime';
-import templates  from '../../handlebars/templates';
+import templates  from '../../templates/templates';
 
 const SupportApi = (function() {
 	let $spinner = $('.spinner-container');

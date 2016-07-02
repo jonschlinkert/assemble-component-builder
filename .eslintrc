@@ -1,0 +1,31 @@
+{
+	"globals": {
+		"apAEM": true,
+		"analytics": true,
+		"cookie": true,
+		"Handlebars": true,
+		"jQuery": true,
+		"objectFitImages": true,
+		"_satellite": true,
+		"YT": true
+	},
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jquery": true
+	},
+	"parserOptions": {
+        "sourceType": "module"
+    },
+	"rules": {
+		"block-scoped-var": 2,
+		"dot-notation": 1,
+		"eol-last": [1, "unix"],
+		"eqeqeq": 2,
+		"no-eval": 2,
+		"no-mixed-spaces-and-tabs": [2, "smart-tabs"],
+		"no-undef": 2,
+		"quotes": [2, "single"],
+		"strict": 2
+	}
+}
