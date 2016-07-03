@@ -1,0 +1,15 @@
+
+/**
+* You need to import your scss in main.scss
+* under the section components
+*
+* Go to src/global/sass
+* and paste the next line at the right place:
+
+@import '../../components/<%name%>/sass/<%name%>';
+
+*/
+
+.<%name%>-title {
+  color: red;
+}

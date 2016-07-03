@@ -7,7 +7,8 @@ module.exports = function (assemble, config, browserSync){
     assemble.watch([
       'src/**/*.hbs',
       'src/**/data/*.json',
-      '!src/apps/**/templates/**/*.hbs'
+      '!src/**/demo-component/**/*.hbs',
+      '!src/**/templates/**/*.hbs'
     ], [
       'clean.html',
       'html'

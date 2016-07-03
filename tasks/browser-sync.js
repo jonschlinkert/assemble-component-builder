@@ -6,7 +6,10 @@ module.exports = function (assemble, config, browserSync){
         baseDir: './dist/'
       },
       open: 'local',
-      https: false
+      https: false,
+      notify: false,
+      reloadDebounce: 500,
+      startPath: '/html/'
     });
     done();
   });
