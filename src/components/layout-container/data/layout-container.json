@@ -1,0 +1,137 @@
+{
+
+
+  "narrow": {
+    "bgColour": "bg-colour--light-grey",
+    "title": ".flex-container--narrow-row",
+    "layoutClasses": "flex-container--narrow-row",
+    "parsys": [
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>"
+    ]
+  },
+  "1card": {
+    "bgColour": "bg-colour--warm-grey-1",
+    "title": ".flex-container--single-row",
+    "layoutClasses": "flex-container--single-row",
+    "parsys": [
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>"
+    ]
+  },
+  "2cards": {
+    "bgColour": "bg-colour--warm-grey-2",
+    "title": ".flex-container--multi-50",
+    "layoutClasses": "flex-container--multi-50",
+    "parsys": [
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>"
+    ]
+  },
+  "3cards": {
+    "bgColour": "bg-colour--warm-grey-1",
+    "title": ".flex-container--multi-33",
+    "layoutClasses": "flex-container--multi-33",
+    "parsys": [
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>"
+    ]
+  },
+
+
+
+  "4cards": {
+    "bgColour": "bg-colour--light-grey",
+    "title": ".flex-container--multi-25",
+    "layoutClasses": "flex-container--multi-25",
+    "parsys": [
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>"
+    ]
+  },
+  "5cards": {
+    "bgColour": "bg-colour--warm-grey-1",
+    "title": ".flex-container--multi-20",
+    "layoutClasses": "flex-container--multi-20",
+    "parsys": [
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>"
+    ]
+  },
+  "6cards": {
+    "bgColour": "bg-colour--warm-grey-2",
+    "title": ".flex-container--multi-16",
+    "layoutClasses": "flex-container--multi-16",
+    "parsys": [
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>"
+    ]
+  },
+  "3565split": {
+    "bgColour": "bg-colour--warm-grey-1",
+    "title": ".flex-container--multi-35-65",
+    "layoutClasses": "flex-container--multi-35-65",
+    "parsys": [
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>"
+    ]
+  },
+
+
+  "6535split": {
+    "bgColour": "bg-colour--light-grey",
+    "title": ".flex-container--multi-65-35",
+    "layoutClasses": "flex-container--multi-65-35",
+    "parsys": [
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>"
+    ]
+  },
+
+
+  "35offset": {
+    "bgColour": "bg-colour--warm-grey-1",
+    "title": ".flex-container--offset-35",
+    "layoutClasses": "flex-container--offset-35",
+    "parsys": [
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>",
+      "<div class='dummy-content'></div>"
+    ]
+  }
+
+
+}
+
+
+
+
+

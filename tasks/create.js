@@ -6,7 +6,7 @@ module.exports = function (assemble, config, browserSync){
   assemble.task('create', function(){
     if (typeof assemble.options.component !== 'undefined') {
 
-      function cap(string) {
+      function camelCase(string) {
         return string.split(/-| /).map(function(str, i){
           if (i!==0) {
             return str.charAt(0).toUpperCase() + str.slice(1);
@@ -17,7 +17,7 @@ module.exports = function (assemble, config, browserSync){
 
       var name = assemble.options.component;
       var nameAll = name.replace(/ /g, '-');
-      var nameJs = cap(name);
+      var nameJs = camelCase(name);
 
       return assemble.src('src/global/demo/demo-component/**/*')
                     .pipe(replace(/<%name%>/g, nameAll))
