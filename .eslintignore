@@ -1,3 +1,4 @@
 src/global/js/vendor
+src/global/demo/js
 src/apps/core/js/templates.js
 dist/**/*.js

@@ -6,18 +6,6 @@ module.exports = function (assemble, config, browserSync){
     return del('dist/');
   });
 
-  assemble.task('clean.html', function(){
-    return del('dist/html/');
-  });
-
-  assemble.task('clean.styles', function(){
-    return del('dist/css/');
-  });
-
-  assemble.task('clean.scripts', function(){
-    return del('dist/js/main.js');
-  });
-
   assemble.task('clean.templates', function(done){
     return del('src/apps/**/templates.js');
   });

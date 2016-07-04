@@ -10,7 +10,6 @@ module.exports = function (assemble, config, browserSync){
       '!src/**/demo-component/**/*.hbs',
       '!src/**/templates/**/*.hbs'
     ], [
-      'clean.html',
       'html'
     ], function(done){
        browserSync.reload();
@@ -20,7 +19,6 @@ module.exports = function (assemble, config, browserSync){
     assemble.watch([
       'src/**/*.scss',
     ], [
-      'clean.styles',
       'styles'
     ], function(done){
        browserSync.reload();
@@ -28,13 +26,19 @@ module.exports = function (assemble, config, browserSync){
     });
 
     assemble.watch([
-      'src/global/js/namespace.js',
-      'src/global/js/vendors/**/*.js',
-      'src/global/js/helpers/**/*.js',
+      'src/global/js/*.js',
       'src/components/**/js/*.js'
     ], [
-      'clean.scripts',
-      'scripts'
+      'scripts.main'
+    ], function(done){
+       browserSync.reload();
+       done();
+    });
+
+    assemble.watch([
+      'src/global/demo/js/*.js'
+    ], [
+      'scripts.demo'
     ], function(done){
        browserSync.reload();
        done();

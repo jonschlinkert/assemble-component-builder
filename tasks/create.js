@@ -19,7 +19,7 @@ module.exports = function (assemble, config, browserSync){
       var nameAll = name.replace(/ /g, '-');
       var nameJs = cap(name);
 
-      return assemble.src('src/global/docs/demo-component/**/*')
+      return assemble.src('src/global/demo/demo-component/**/*')
                     .pipe(replace(/<%name%>/g, nameAll))
                     .pipe(replace(/<%name:js%>/g, nameJs))
                     .pipe(rename(function(path){

@@ -8,7 +8,10 @@ module.exports = function (assemble, config, browserSync){
   var autoprefixer = require('gulp-autoprefixer');
 
   assemble.task('styles', function (){
-    return assemble.src('src/global/sass/*.scss')
+    return assemble.src([
+                    'src/global/sass/*.scss',
+                    'src/global/demo/sass/*.scss'
+                  ])
                   .pipe(injectString.prepend(config.versionString))
                   .pipe(sourcemaps.init())
                   .pipe(sass({ style: 'expanded', importer: moduleImporter() }))
