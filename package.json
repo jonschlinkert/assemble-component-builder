@@ -31,6 +31,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-svgo": "^1.0.3",
     "gulp-wrap": "^0.13.0",
     "handlebars-helpers": "^0.6.1",
     "path": "^0.12.7",

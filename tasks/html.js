@@ -35,7 +35,7 @@ module.exports = function (assemble, config, browserSync){
     }
 
     return data;
-  };
+  }
 
   assemble.helper('svgicon', function(file){
     var content = '';
@@ -50,6 +50,21 @@ module.exports = function (assemble, config, browserSync){
     return content;
   });
 
+  assemble.task('html.load.icons', function (done){
+    var data = {};
+    var dataName = 'svgs';
+
+    glob('./dist/svg-icons/*.svg', function(err, files){
+      if(err) done(err);
+
+      data[dataName] = files.map(function(file){
+        return path.basename(file, '.svg');
+      });
+
+      assemble.data(data);
+      done();
+    });
+  });
 
   assemble.task('html.load', function(done){
     assemble.partials([
@@ -90,6 +105,7 @@ module.exports = function (assemble, config, browserSync){
   });
 
   assemble.task('html', [
+    'html.load.icons',
     'html.load',
     'html.build'
   ]);
