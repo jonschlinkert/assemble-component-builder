@@ -1,0 +1,246 @@
+// -----------------------------------------------------------------------------
+// This file contains all colours used within the AusPost Corporate sites
+// -----------------------------------------------------------------------------
+
+/// Dependencies:
+///  -- none
+
+/// *********************************** ///
+///   AusPost Corporate Colour Palette  ///
+/// *********************************** ///
+///			 Last updated: 1 Jun 2016 		  ///
+
+/// The intention of the following colour palette
+/// is to simplify the naming conventions for variables.
+
+/// The palette is split into:
+/// 1. Corporate            -   $AP_C
+
+/****************************/
+/*** 1. Corporate Palette ***/
+/****************************/
+
+/* Digital Post Red */
+$AP_C_PostRed:							#DC1928;
+
+/* Digital Post Grey */
+$AP_C_PostGrey_100:					#E3E1E1;
+$AP_C_PostGrey_200:					#C7C5C5;
+$AP_C_PostGrey_300:					#736D6C;
+$AP_C_PostGrey_400:					#382F2D;
+
+/* Digital Pink */
+$AP_C_Pink_100: 						#FFECF0;
+$AP_C_Pink_200: 						#FCC1CF;
+$AP_C_Pink_300: 						#F989A3;
+$AP_C_Pink_400: 						#F05B7D;
+$AP_C_Pink_500: 						#D65170;
+$AP_C_Pink_600: 						#BD4863;
+$AP_C_Pink_700: 						#A33E56;
+
+/* Digital Light Pink */
+$AP_C_PinkLight_100:				#FDF1F6;
+$AP_C_PinkLight_200:				#FFDFED;
+$AP_C_PinkLight_300:				#FFC4DE;
+$AP_C_PinkLight_400:				#F8ABCC;
+$AP_C_PinkLight_500:				#DE99B7;
+$AP_C_PinkLight_600:				#C487A2;
+$AP_C_PinkLight_700:				#AB768D;
+
+/* Digital Dark Pink */
+$AP_C_PinkDark_100:					#FFE9F2;
+$AP_C_PinkDark_200:					#FFA6CC;
+$AP_C_PinkDark_300:					#FF79B2;
+$AP_C_PinkDark_400:					#EE2E7F;
+$AP_C_PinkDark_500:					#D42870;
+$AP_C_PinkDark_600:					#BA2362;
+$AP_C_PinkDark_700:					#A11F55;
+
+/* Digital Purple */
+$AP_C_Purple_100: 					#F4F2FF;
+$AP_C_Purple_200: 					#E1DEFF;
+$AP_C_Purple_300: 					#A6A0EF;
+$AP_C_Purple_400: 					#8177E7;
+$AP_C_Purple_500: 					#726ACC;
+$AP_C_Purple_600: 					#655EB5;
+$AP_C_Purple_700: 					#57519C;
+
+/* Digital Light Purple */
+$AP_C_PurpleLight_100: 			#F6F5FF;
+$AP_C_PurpleLight_200: 			#ECEBFF;
+$AP_C_PurpleLight_300: 			#DCD9FF;
+$AP_C_PurpleLight_400: 			#CDC9F5;
+$AP_C_PurpleLight_500: 			#B7B4DB;
+$AP_C_PurpleLight_600: 			#A29FC2;
+$AP_C_PurpleLight_700: 			#8D8AA8;
+
+/* Digital Dark Purple */
+$AP_C_PurpleDark_100: 			#F3F2FF;
+$AP_C_PurpleDark_200: 			#D6D3FF;
+$AP_C_PurpleDark_300: 			#9087F1;
+$AP_C_PurpleDark_400: 			#5044DE;
+$AP_C_PurpleDark_500: 			#483DC4;
+$AP_C_PurpleDark_600: 			#3F35AB;
+$AP_C_PurpleDark_700: 			#352D91;
+
+/* Digital Blue */
+$AP_C_Blue_100: 						#E6F6FC;
+$AP_C_Blue_200: 						#BAE5F5;
+$AP_C_Blue_300: 						#6EC9EB;
+$AP_C_Blue_400: 						#009FDA;
+$AP_C_Blue_500: 						#008CBF;
+$AP_C_Blue_600: 						#007AA6;
+$AP_C_Blue_700: 						#00678C;
+
+/* Digital Light Blue */
+$AP_C_BlueLight_100: 				#F2FBFF;
+$AP_C_BlueLight_200: 				#DBF5FF;
+$AP_C_BlueLight_300: 				#B8ECFF;
+$AP_C_BlueLight_400: 				#99D9F0;
+$AP_C_BlueLight_500: 				#89C2D6;
+$AP_C_BlueLight_600: 				#79ABBD;
+$AP_C_BlueLight_700: 				#6894A3;
+
+/* Digital Dark Blue */
+$AP_C_BlueDark_100: 				#DFF1FF;
+$AP_C_BlueDark_200: 				#95C8EE;
+$AP_C_BlueDark_300: 				#1064A3;
+$AP_C_BlueDark_400: 				#003359;
+$AP_C_BlueDark_500: 				#002440;
+$AP_C_BlueDark_600: 				#001626;
+$AP_C_BlueDark_700: 				#00070D;
+
+/* Digital Green */
+$AP_C_Green_100: 						#E1FCEB;
+$AP_C_Green_200: 						#B2F7CB;
+$AP_C_Green_300: 						#43D478;
+$AP_C_Green_400: 						#00AC3E;
+$AP_C_Green_500: 						#009135;
+$AP_C_Green_600: 						#00782C;
+$AP_C_Green_700: 						#005E23;
+
+/* Digital Light Green */
+$AP_C_GreenLight_100: 			#F0FFF5;
+$AP_C_GreenLight_200: 			#CDF8DC;
+$AP_C_GreenLight_300: 			#B2E9C6;
+$AP_C_GreenLight_400: 			#99DEB2;
+$AP_C_GreenLight_500: 			#87C49E;
+$AP_C_GreenLight_600: 			#76AB89;
+$AP_C_GreenLight_700: 			#649175;
+
+/* Digital Dark Green */
+$AP_C_GreenDark_100: 				#E8FAF1;
+$AP_C_GreenDark_200: 				#A6EAC6;
+$AP_C_GreenDark_300: 				#59C189;
+$AP_C_GreenDark_400: 				#155734;
+$AP_C_GreenDark_500: 				#0F3D24;
+$AP_C_GreenDark_600: 				#092415;
+$AP_C_GreenDark_700: 				#020A06;
+
+/* Digital Teal */
+$AP_C_Teal_100: 						#EDFCF9;
+$AP_C_Teal_200: 						#BDFCF0;
+$AP_C_Teal_300: 						#6EEBD2;
+$AP_C_Teal_400: 						#00E5B7;
+$AP_C_Teal_500: 						#00CCA3;
+$AP_C_Teal_600: 						#00B38F;
+$AP_C_Teal_700: 						#00997A;
+
+/* Digital Light Teal */
+$AP_C_TealLight_100: 				#EBFFFD;
+$AP_C_TealLight_200: 				#D6FFFA;
+$AP_C_TealLight_300: 				#9CF9EF;
+$AP_C_TealLight_400: 				#82EFE3;
+$AP_C_TealLight_500: 				#74D6CB;
+$AP_C_TealLight_600: 				#66BDB3;
+$AP_C_TealLight_700: 				#58A39A;
+
+/* Digital Dark Teal */
+$AP_C_TealDark_100: 				#E1F7F5;
+$AP_C_TealDark_200: 				#CBEEEA;
+$AP_C_TealDark_300: 				#87DED4;
+$AP_C_TealDark_400: 				#00C1AA;
+$AP_C_TealDark_500: 				#00A693;
+$AP_C_TealDark_600: 				#008F7E;
+$AP_C_TealDark_700: 				#007568;
+
+/* Digital Orange */
+$AP_C_Orange_100: 					#FFF4E5;
+$AP_C_Orange_200: 					#FCE4C5;
+$AP_C_Orange_300: 					#FAB55A;
+$AP_C_Orange_400: 					#FF9000;
+$AP_C_Orange_500: 					#E68200;
+$AP_C_Orange_600: 					#CC7400;
+$AP_C_Orange_700: 					#B36500;
+
+/* Digital Light Orange */
+$AP_C_OrangeLight_100: 			#FFF9F7;
+$AP_C_OrangeLight_200: 			#FEEEE9;
+$AP_C_OrangeLight_300: 			#FFD3C4;
+$AP_C_OrangeLight_400: 			#FEC0AB;
+$AP_C_OrangeLight_500: 			#E6AD9A;
+$AP_C_OrangeLight_600: 			#CC9A89;
+$AP_C_OrangeLight_700: 			#B38678;
+
+/* Digital Dark Orange */
+$AP_C_OrangeDark_100: 			#FFF0EB;
+$AP_C_OrangeDark_200: 			#FFD3C4;
+$AP_C_OrangeDark_300: 			#FF9876;
+$AP_C_OrangeDark_400: 			#FC622E;
+$AP_C_OrangeDark_500: 			#E35729;
+$AP_C_OrangeDark_600: 			#C94E24;
+$AP_C_OrangeDark_700: 			#B04420;
+
+/* Digital Yellow */
+$AP_C_Yellow_100: 					#FFFAE2;
+$AP_C_Yellow_200: 					#FFEFA1;
+$AP_C_Yellow_300: 					#FFE14C;
+$AP_C_Yellow_400: 					#FFD500;
+$AP_C_Yellow_500: 					#E6BF00;
+$AP_C_Yellow_600: 					#CCAA00;
+$AP_C_Yellow_700: 					#B39500;
+
+/* Digital Light Yellow */
+$AP_C_YellowLight_100: 			#FFFCF2;
+$AP_C_YellowLight_200: 			#FFF2CF;
+$AP_C_YellowLight_300: 			#FFE8A6;
+$AP_C_YellowLight_400: 			#FFDB76;
+$AP_C_YellowLight_500: 			#E6C46A;
+$AP_C_YellowLight_600: 			#CCAF5E;
+$AP_C_YellowLight_700: 			#B39952;
+
+/* Digital Dark Yellow */
+$AP_C_YellowDark_100: 			#FFF7E3;
+$AP_C_YellowDark_200: 			#FAE4B1;
+$AP_C_YellowDark_300: 			#F5C453;
+$AP_C_YellowDark_400: 			#EAB02A;
+$AP_C_YellowDark_500: 			#D19E26;
+$AP_C_YellowDark_600: 			#B88A21;
+$AP_C_YellowDark_700: 			#9E771C;
+
+/* Digital Slate */
+$AP_C_Slate_100: 						#F5F6F7;
+$AP_C_Slate_200: 						#E1E6EB;
+$AP_C_Slate_300: 						#AEB7C1;
+$AP_C_Slate_400: 						#8A939D;
+$AP_C_Slate_500: 						#757C85;
+$AP_C_Slate_600: 						#5E646B;
+$AP_C_Slate_700: 						#484C52;
+
+/* Digital Light Slate */
+$AP_C_SlateLight_100: 			#F7F9FA;
+$AP_C_SlateLight_200: 			#EBEEF0;
+$AP_C_SlateLight_300: 			#DCE0E3;
+$AP_C_SlateLight_400: 			#D0D5D8;
+$AP_C_SlateLight_500: 			#B8BCBF;
+$AP_C_SlateLight_600: 			#9FA3A6;
+$AP_C_SlateLight_700: 			#878A8C;
+
+/* Digital Dark Slate */
+$AP_C_SlateDark_100: 				#F5F9FC;
+$AP_C_SlateDark_200: 				#DDE8F0;
+$AP_C_SlateDark_300: 				#8EA0AD;
+$AP_C_SlateDark_400: 				#535F67;
+$AP_C_SlateDark_500: 				#3E474D;
+$AP_C_SlateDark_600: 				#292F33;
+$AP_C_SlateDark_700: 				#15181A;

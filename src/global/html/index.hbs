@@ -1,0 +1,32 @@
+---
+layout: base
+isIndex: true
+---
+
+<div class="demo-hero">
+  <div class="demo-container">
+    <h1 class="demo-hero-title" id="content">AusPost AEM Frontend</h1>
+    <p class="demo-hero-byline">A collection of frontend styles, markup, components, assets and more currently powering all new AEM deployments for Australia Post.</p>
+    <p><a href="https://stash.cd.auspost.com.au/projects/AEMCMS/repos/aem-fed/browse" target="_blank" class="btn btn-tertiary">Visit Stash repo</a></p>
+  </div>
+</div>
+
+<div class="demo-container">
+  <div class="demo-wrapper">
+    <nav class="demo-sidebar">
+
+      {{#each navigation}}
+      <div class="demo-sidebar-wrapper">
+        <h3 class="demo-sidebar-title">{{title}}</h3>
+
+        <ul class="demo-sidebar-list">
+          {{#each items}}
+          <li class="demo-sidebar-item"><a href="{{href}}" class="demo-sidebar-link">{{title}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/each}}
+
+    </nav>
+  </div>
+</div>

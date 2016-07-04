@@ -1,0 +1,35 @@
+// How to use
+// http://thesassway.com/intermediate/understanding-placeholder-selectors
+// 
+// .class {
+//   @extend %btn-unstyled;
+// }
+
+%btn-unstyled {
+  outline: none;
+  background-color: transparent; 
+  border: none;
+}
+
+%content-callout {
+	margin: 0 0 20px;
+	padding: 4px 14px;
+	display: inline-block;
+	background: $AP_S_PinkDark;
+	font-size: 0.8em;
+	position: relative;
+	border-radius: 2px;
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: 10px;
+		right: auto;
+		bottom: -6px;
+		border: 4px solid;
+		border-color: $AP_S_PinkDark transparent transparent $AP_S_PinkDark;
+		transform: rotate(10deg);
+	}
+}

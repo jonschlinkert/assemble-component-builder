@@ -1,1 +1,91 @@
-$color: purple;
+/**
+ * font variables
+ */
+
+$body-font--alternate : Helvetica, Arial, sans-serif;
+
+
+/**
+ * layout container
+ */
+
+$layout-container-width: 						1170px;
+$layout-container-heading-width: 		780px;
+$layout-container-body-copy: 				555px;
+$layout-container-narrow: 					750px;
+$layout-container-padding-desktop: 	15px;
+$layout-container-padding-mobile: 	15px;
+
+$expandable-block-size: 945px;
+
+/**
+ * logo heights
+ */
+$logo-height: 46px;
+$logo-height--lg: 40px;
+$logo-height--xl: 53px;
+
+/**
+ * navigation
+ */
+$nav-height--lg: 60px;
+$nav-height--xl: 75px;
+$border-radius--nav: 5px;
+
+$headerWidth-lg: 940px;
+$headerWidth-xl: $layout-container-width;
+
+$header-height: 80px;
+
+/**
+ * borders
+ */
+$global-border-radius: 4px;
+
+/**
+ * spacing
+ */
+$global-vertical-spacing: 20px;   // space between titles and paragraphs or images etc.
+$global-component-padding-vertical-mobile: 30px;
+$global-component-padding-horizontal-mobile: 30px;
+$global-component-padding-vertical-desktop: 40px;
+$global-component-padding-horizontal-desktop: 60px;
+
+/**
+ * z-index list
+ */
+$z-index-global-hero: 4;
+$z-index-global-tools: 5;
+
+$z-index-header: 10;
+$z-index-nav: 10;
+$z-index-primary-nav: 11;
+$z-index-sub-pn: 11;
+$z-index-sub-pn-arrow: 12;
+$z-index-search-overlay: 12;
+$z-index-track-overlay: 12;
+$z-index-login: 12;
+$z-index-search: 13;
+$z-collapsible-nav-flyout: 14;
+
+/**
+ * animation
+ */
+$an-height: 0.3s;
+
+$generic-animations:              all .2s ease-out;
+
+$transition-global-header:        left 0.5s ease;
+$transition-pn-link-active-state: 0.2s box-shadow;
+$transition-pn-trigger-close:     background-color .5s linear;
+
+$transition-search-overlay:       opacity 0.4s ease;
+$transition-search-offsreen:      top 0.3s ease;
+
+$transition-button-rollover:      1s background;
+$transition-link-rollover:        padding-bottom .15s ease-in;
+
+
+//box-shadow
+
+$flyout-box-shadow-l1:            0 10px 30px 0 rgba(0,0,0,0.3);

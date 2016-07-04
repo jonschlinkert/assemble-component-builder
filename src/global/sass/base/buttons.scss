@@ -1,0 +1,55 @@
+
+
+//
+// Most buttons can be found in the style guide - buttons here are only used on AEM
+//
+
+
+.btn-back-to-top {
+  margin: 30px -10px 0;
+  background-color: $AP_P_Grey;
+  border-radius: 0;
+  height: 46px;
+  padding: 0 20px;
+  text-align: left;
+  color: $AP_P_White;
+  @include media-breakpoint-up(lg) {
+    margin: 30px 0 0;
+    border-radius: $global-border-radius;
+  }
+}
+
+.btn-back-to-top-inner {
+  display: flex;
+  align-items: center;
+}
+
+.back-to-top-arrow {
+  display: flex;
+  padding-right: 20px;
+}
+
+.back-to-top-text {
+  width: 100%;
+  border-left: 1px solid $AP_P_White;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 20px;
+    text-align: left;
+  }
+}
+
+// TODO: move this to auspost-styles, once we have a process for that.
+.btn-unstyled {
+  @include btn-unstyled()
+}
+
+// Example
+
+// <button class="btn btn-dark btn-back-to-top js-back-to-top">
+//   <span class="btn-back-to-top-inner">
+//     <span class="back-to-top-arrow"><svg></svg></span>
+//     <span class="back-to-top-text">Back to top</span>
+//   </span>
+// </button>

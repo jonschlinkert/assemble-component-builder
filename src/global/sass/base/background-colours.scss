@@ -1,0 +1,90 @@
+/***************************
+*
+*  Background Colour
+*
+***************************/
+
+
+
+//  default - white
+.bg-colour {
+  background-color: $AP_P_White;
+}
+
+$bg-colours: (
+  dark-yellow: ( $AP_S_YellowDark, "dark" ),
+  yellow: ( $AP_S_Yellow, "dark" ),
+  light-yellow: ( $AP_S_YellowLight, "dark" ),
+  dark-leaf: ( $AP_S_GreenDark, "light" ),
+  leaf: ( $AP_S_Green, "dark" ),
+  light-leaf: ( $AP_S_GreenLight, "dark" ),
+  dark-purple: ( $AP_S_PurpleDark, "light" ),
+  purple: ( $AP_S_Purple, "dark" ),
+  light-purple: ( $AP_S_PurpleLight, "dark" ),
+  dark-blue: ( $AP_S_BlueDark, "light" ),
+  blue: ( $AP_S_Blue, "light" ),
+  light-blue: ( $AP_S_BlueLight, "dark" ),
+  dark-teal: ( $AP_S_TealDark, "dark" ),
+  teal: ( $AP_S_Teal, "dark" ),
+  light-teal: ( $AP_S_TealLight, "dark" ),
+  dark-orange: ( $AP_S_OrangeDark, "dark" ),
+  orange: ( $AP_S_Orange, "dark" ),
+  light-orange: ( $AP_S_OrangeLight, "dark" ),
+  dark-pink: ( $AP_S_PinkDark, "light" ),
+  pink: ( $AP_S_Pink, "dark" ),
+  light-pink: ( $AP_S_PinkLight, "dark" ),
+  parcel-post: ( $AP_PS_ParcelPost, "light" ),
+  express-post: ( $AP_PS_ExpressPost, "dark" ),
+  courier-post: ( $AP_PS_CourierPost, "light" ),
+  intl-travel: ( $AP_PS_IntTravel, "light" ),
+  startrack: ( $AP_PS_StarTrack, "light" ),
+  warm-grey-2: ( $AP_T_WarmGrey_3, "dark" ),
+  warm-grey-1: ( $AP_T_WarmGrey_2, "dark" ),
+  light-grey: ( $AP_T_WarmGrey_1, "dark" ),
+  dark-slate: ( $AP_T_CoolGrey_4, "light" ),
+  slate: ( $AP_T_CoolGrey_3, "dark" ),
+  light-slate: ( $AP_T_CoolGrey_2, "dark" ),
+  cool-slate: ( $AP_T_CoolGrey_1, "dark" ),
+  transparent: ( transparent, "transparent" )
+);
+
+@each $name, $colors in $bg-colours {
+  $bgcolor: nth($colors, 1);
+  $fontcolor: nth($colors, 2);
+
+  .bg-colour--#{$name} {
+    background-color: $bgcolor;
+
+    @if $fontcolor == "light" {
+      color: $AP_P_White;
+
+      .layout-container-heading,
+      .layout-container-body-copy,
+      .expandable-block-trigger--video,
+      .expandable-block-trigger--video:hover,
+      &.footer .footer-link { color: $AP_P_White;  }
+
+      .bg-colour--transparent {
+        background-color: transparent;
+
+        .layout-container-heading,
+        .layout-container-body-copy { color: $AP_P_White; }
+      }
+
+      a.tile:not(.tile--card) {
+        color: inherit;
+
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+
+/***************************
+*
+*     End of BG-Colour
+*
+***************************/

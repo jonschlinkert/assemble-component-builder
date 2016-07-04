@@ -1,0 +1,22 @@
+// 6 Apr 2016
+// ----------
+// Allows all elements with <span>'s added' to be aligned in the AEM authoring environment.
+//
+// TODO: Deprecate and remove after fixing adding of span functionality in AEM
+//
+
+span[class^='span-text-align'] {
+  display: block;
+}
+
+.span-text-align--left {
+	text-align: left;
+}
+
+.span-text-align--center {
+	text-align: center;
+}
+
+.span-text-align--right {
+	text-align: right;
+}
