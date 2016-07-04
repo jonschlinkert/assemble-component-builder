@@ -1,0 +1,27 @@
+.demo-icon-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.demo-icon-figure {
+  width: 33%;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+
+  @media (min-width: 970px) {
+    width: 16%;
+  }
+}
+
+.demo-icon {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+}

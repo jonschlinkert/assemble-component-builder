@@ -1,17 +1,25 @@
 ---
 layout: base
+isDemo: true
 pageTitle: SVG Icons
 ---
 
-<ul>
-{{#each svgs}}
-  <li>
-    <span>
-      {{svgicon this}}
-    </span>
-    <span>
-      {{this}}
-    </span>
-  </li>
-{{/each}}
-</ul>
+<div class="demo-hero">
+  <div class="demo-container">
+    <h1 class="demo-hero-title" id="content">SVG Icons</h1>
+  </div>
+</div>
+
+<div class="demo-container">
+  <div class="demo-wrapper demo-icon-wrapper">
+    {{#each svgs}}
+      <figure class="demo-icon-figure">
+        <span class="demo-icon">{{svgicon this}}</span>
+        <figcaption class="demo-icon-figcaption">{{this}}</figcaption>
+      </figure>
+    {{/each}}
+  </div>
+</div>
+
+
+

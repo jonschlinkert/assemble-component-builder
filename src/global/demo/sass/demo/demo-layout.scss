@@ -1,9 +1,10 @@
 .demo-html {
   background: #f3f4f5;
-}
 
-.demo-body {
-  padding-bottom: 60px;
+  body {
+    padding-bottom: 60px;
+    background: inherit;
+  }
 }
 
 .demo-container {
