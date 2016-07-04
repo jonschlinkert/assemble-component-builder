@@ -1,4 +1,4 @@
-var apAEM = {};
+var apAEM = apAEM || {};
     apAEM.COMPONENTS = {};
     apAEM.HELPERS = {};
 
