@@ -1,3 +1,24 @@
 {
-  "content": "hello"
+  "list": [
+    {
+      "title": "Post office",
+      "icon": "icon-po",
+      "href": "#"
+    },
+    {
+      "title": "Redirect",
+      "icon": "icon-redirect",
+      "href": "#"
+    },
+    {
+      "title": "Track",
+      "icon": "icon-track",
+      "href": "#"
+    },
+    {
+      "title": "Travel",
+      "icon": "icon-travel",
+      "href": "#"
+    }
+  ]
 }

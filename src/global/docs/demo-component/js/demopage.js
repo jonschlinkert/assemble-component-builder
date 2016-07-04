@@ -1,17 +1,19 @@
+
+// all javascript files are concated by default in main.js
 ;(function($, COMPONENTS, HELPERS) {
   'use strict';
 
+  // component are expected to be namespaced
+  // in namespace.COMPONENTS
   COMPONENTS.<%name:js%> = (function(){
 
     // private function are expected
     // to start by an underscore
-    function _private(){
-      console.log('_private function is called');
-    }
+    // to start by an underscore:
+    // function _private(){}
 
     function init(){
-      _private();
-      console.log('init function is called');
+      console.log('<%name:js%> is called');
     }
 
     return {
@@ -22,4 +24,6 @@
 
   COMPONENTS.<%name:js%>.init();
 
+// if you don't need any helpers,
+// do not register the namespace.HELPERS
 })(jQuery, apAEM.COMPONENTS, apAEM.HELPERS);

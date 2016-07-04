@@ -5,11 +5,9 @@
 *
 * Go to src/global/sass
 * and paste the next line at the right place:
-
-@import '../../components/<%name%>/sass/<%name%>';
-
+* > @import '../../components/<%name%>/sass/<%name%>';
 */
 
-.<%name%>-title {
+.<%name%>-list {
   color: red;
 }
