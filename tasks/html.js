@@ -50,6 +50,17 @@ module.exports = function (assemble, config, browserSync){
     return content;
   });
 
+  assemble.helper('pre', function(option){
+    var content = option.fn(this)
+      .replace(/{/g, '{{')
+      .replace(/}/g, '}}')
+      .replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+         return '&#'+i.charCodeAt(0)+';';
+      });
+
+    return '<pre><code>'+content+'</code></pre>';
+  });
+
   assemble.task('html.load.icons', function (done){
     var data = {};
     var dataName = 'svgs';

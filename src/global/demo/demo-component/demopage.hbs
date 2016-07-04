@@ -13,12 +13,11 @@ layout: base
   as second parameter :
   > {{> partialName dataFileName }}
 
-  You can document your code by using highlight.js
-  for html, hbs, css, js and json:
-  > <pre><code> your code here </code><pre>
-
-  for more informations about highlight.js, go to :
-  > https://highlightjs.org/usage/
+  You can document your code by using the custom helper pre.
+  If you want to illustrate a variable, use one curly brace
+  instead of two. handlebars won't compile it and the pre helper
+  will return a double curly brace:
+  > {{#pre}}<h1>{title}</h1>{{/pre}}
 
 --}}
 
