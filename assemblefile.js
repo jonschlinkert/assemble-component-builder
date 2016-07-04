@@ -27,6 +27,8 @@ assemble.task('default',
   [
     'clean',
   ], assemble.parallel([
+    'copy', 'svg'
+  ]), assemble.parallel([
     'html', 'styles', 'scripts', 'apps'
   ]), [
     'browserSync',
@@ -39,6 +41,8 @@ assemble.task('prod',
   [
     'clean',
   ], assemble.parallel([
+    'copy', 'svg'
+  ]), assemble.parallel([
     'html', 'styles', 'scripts', 'apps'
   ]), [
     'minification'
