@@ -4,6 +4,7 @@ module.exports = function (assemble, config, browserSync){
   var glob = require('glob');
   var path = require('path');
   var del = require('del');
+  var fs = require('fs');
 
   navigationData = function(){
     var temp = {};
@@ -35,6 +36,20 @@ module.exports = function (assemble, config, browserSync){
 
     return data;
   };
+
+  assemble.helper('svgicon', function(file){
+    var content = '';
+    var path = 'dist/svg-icons/'+file+'.svg';
+
+    try {
+      content = fs.readFileSync(path, 'utf8');
+    } catch (e) {
+      console.log('icon not found');
+    }
+
+    return content;
+  });
+
 
   assemble.task('html.load', function(done){
     assemble.partials([
