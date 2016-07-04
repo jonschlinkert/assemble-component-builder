@@ -1,0 +1,76 @@
+/***************************
+*
+*  Global mixins
+*
+***************************/
+
+// Word wrap
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: normal;
+  word-break: break-word;
+  -ms-hyphens: none;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+// Ellipsis
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin errorIcon(){
+  &:before {
+    width: 16px;
+    height: 16px;
+    margin-top: -1px;
+    margin-right: 5px;
+    content: "";
+    background-image: url("../css-images/icon-error-exclamation.svg");
+    display: inline-block;
+    vertical-align: top;
+    background-size: 16px;
+  }
+}
+// Object Fit
+// https://github.com/bfred-it/object-fit-images
+
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
+@mixin object-fit($fit: fill, $position: null){
+  -o-object-fit: $fit;
+     object-fit: $fit;
+  @if $position {
+    -o-object-position: $position;
+       object-position: $position;
+    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+    font-family: 'object-fit: #{$fit}';
+  }
+}
+
+@mixin btn-unstyled() {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  &:focus {
+    outline: 1px dotted $AP_P_Grey;
+  }
+}
+
+@mixin content-callout($bg) {
+  background: $bg;
+
+  &:after {
+    border-color: $bg transparent transparent $bg;
+  }
+}

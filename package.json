@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "assemble": "^0.15.0",
+    "auspost-styles": "^1.6.2",
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
     "base-watch": "^0.1.3",

@@ -1,0 +1,30 @@
+.demo-hero {
+  margin: 0 auto 20px;
+  padding: 20px 0;
+  background: rgb(0, 103, 140);
+  color: #fff;
+
+  @media (min-width: 970px) {
+    margin: 0 auto 70px;
+    padding: 80px 0 70px;
+  }
+
+  .demo-hero-title {
+    font-size: 3em;
+  }
+
+  .btn-tertiary {
+    background: transparent;
+    color: #fff;
+    border-color: inherit;
+
+    @media (min-width: 970px) {
+      margin-left: 5px;
+    }
+
+    &:hover {
+      color: #d0d5d8;
+    }
+  }
+}
+

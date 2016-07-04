@@ -1,12 +1,38 @@
+// -----------------------
+// Auspost Styleguide
+@import 'auspost-styles';
 
-// Global Base
+// -----------------------
+// Global
+@import 'base/colors-corp';
 @import 'base/variables';
+@import 'base/background-colours';
+@import 'base/mixins';
+@import 'base/placeholders';
 
+// -----------------------
 // Components
-@import '../../components/component1/sass/component1';
-@import '../../components/component2/sass/component2';
-@import '../../components/component3/sass/component3';
 
+// -----------------------
 // Support App
 @import '../../apps/support/sass/support';
 @import '../../apps/support-new/sass/support';
+
+// -----------------------
+// Shame
+@import 'base/aem-shame';
+
+// -----------------------
+// Helpers
+@import 'base/helper-classes';
+@import 'base/link-classes';
+@import 'base/buttons';
+
+/** -----------------------
+* TODO
+*
+*  in      > /src/components/header/sass/_header.scss
+*  delete  > $header-height: 80px;
+*  because > $header-height has been moved to /src/global/sass/base/variables
+*
+*/

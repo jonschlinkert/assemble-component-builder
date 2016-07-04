@@ -1,0 +1,114 @@
+.disclaimer {
+  font-family: $body-font-family;
+  font-size: 80%;
+  line-height: 1.5;
+  color: $AP_T_WarmGrey_4;
+}
+
+.disclaimer-list {
+	list-style: none;
+}
+.disclaimer-list-item {
+	margin-bottom: 2em;
+	&:nth-last-of-type(1) {
+	  margin-bottom: 0px;
+	}
+}
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+ 
+.no-padding { padding: 0 !important; }
+.no-padding--top { padding-top: 0 !important; }
+.no-padding--bottom {
+  margin-bottom: -30px;
+  padding-bottom: 0 !important;
+}
+
+.no-overflow { overflow: hidden; }
+
+
+// JS helper classes
+.is-fixed { position: fixed; }
+.is-hidden { display: none; }
+.is-animated-height { transition: height $an-height ease; }
+.is-offset { margin-top: $header-height; }
+.is-flex { display: flex; }
+
+
+// body wrapper for mobile nav and footer
+.wrapper-body { 
+  overflow-x: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+// no scroll is to stop scroll on IOS
+.no-scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+}
+
+
+
+// this is for the sticky footer
+.main-content {
+  flex: 1 0 auto;
+
+  // Fix to force IE11 to recalculate height of the .main-content wrapper
+  min-height: 1px;
+}
+
+.text-hidden--mobile {
+  position: absolute;
+  text-indent: 101%;
+  @media (min-width: $screen-sm) {
+    position: static;
+    text-indent: 0;
+  }
+}
+
+.text-hidden--desktop {
+  @media (min-width: $screen-lg) {
+    position: absolute;
+    text-indent: 101%;
+  }
+}
+
+.hidden-mobile {
+  display: none;
+  @media (min-width: $screen-lg) { display: block; }
+}
+
+.hidden-desktop {
+  @media (min-width: $screen-lg) { display: none !important; }
+}
+
+.btn-flex {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.btn-dark {
+  color: $AP_P_White;
+  background: $AP_P_Grey;
+  border: 1px solid transparent;
+  font-weight: 500;
+
+  transition: $transition-button-rollover;
+
+  &:hover,
+  &:focus {
+    background-color: $AP_C_PostGrey_300;
+  }
+}
+
+
+
+
