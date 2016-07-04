@@ -1,1 +1,4 @@
-$('.support-new').addClass('support-js');
+import supportInit from './import/app.support.js'
+
+supportInit()
+$('.support-new').addClass('support-js')
