@@ -1,0 +1,23 @@
+<section class="layout-container {{bgColour}}{{#if noPaddingTop}} no-padding--top{{/if}}">
+  <div class="layout-container-wrapper">
+    {{#if title}}
+    <h2 class="layout-container-heading">{{title}}</h2>
+    {{/if}}
+
+    {{#if copy}}
+    <p class="layout-container-body-copy">{{copy}}</p>
+    {{/if}}
+
+    <div class="flex-container {{layoutClasses}}">
+    {{#each parsys}}
+      <div class="aem-extra">
+      {{{this}}}
+      </div>
+    {{/each}}
+    </div>
+
+    {{#if lowerCopy}}
+    <p class="layout-container-body-copy layout-container-body-copy--lower">{{lowerCopy}}</p>
+    {{/if}}
+  </div>
+</section>

@@ -1,0 +1,253 @@
+/***************************
+*
+* layout-container
+*
+***************************/
+
+.layout-container {
+  padding: 65px 0 70px;
+  width: 100%;
+
+  @media (min-width: $screen-sm) { padding: 100px 0; }
+}
+
+// Startrack
+
+.theme-startrack {
+
+  // 10%
+  .layout-container--pad-10 {
+    @media (min-width: $screen-sm) { padding: 100px 5%; }
+  }
+  // 20%
+  .layout-container--pad-20 {
+    @media (min-width: $screen-sm) { padding: 100px 10%; }
+  }
+  // 30%
+  .layout-container--pad-30 {
+    @media (min-width: $screen-sm) { padding: 100px 15%; }
+  }
+  // 40%
+  .layout-container--pad-40 {
+    @media (min-width: $screen-sm) { padding: 100px 20%; }
+  }
+}
+
+.layout-container-wrapper,
+.layout-container-heading,
+.layout-container-body-copy {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.layout-container-wrapper { max-width: $layout-container-width; }
+
+
+.layout-container-heading {
+  max-width: $layout-container-heading-width;
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-sm) { margin-bottom: 25px; }
+}
+
+
+.layout-container-body-copy {
+  max-width: $layout-container-body-copy;
+  margin-bottom: 50px;
+
+  @media (min-width: $screen-sm) { margin-bottom: 80px; }
+}
+
+
+.layout-container-body-copy--lower {
+  max-width: $layout-container-body-copy;
+  margin-bottom: 0;
+
+  .no-padding--bottom & {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+.layout-container-heading,
+.layout-container-body-copy {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .theme-campaign &,
+  .theme-startrack & { text-align: center; }
+
+  .theme-corporate & { text-align: left; }
+}
+
+// Flexbox container
+.flex-container {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &.flex-container--left { justify-content: flex-start; }
+  &.flex-container--center { justify-content: center; }
+  &.flex-container--right { justify-content: flex-end; }
+  &.flex-container--around { justify-content: space-around; }
+  &.flex-container--between { justify-content: space-between; }
+
+  > div {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 30px;
+  }
+}
+
+
+// Default is single row
+.flex-container--single-row {
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+//narrow center on desktop
+.flex-container--narrow-row {
+
+  > div {
+    @media (min-width: $screen-sm) {
+      max-width: $layout-container-narrow;
+    }
+  }
+}
+
+
+// Multiple rows, 1/2 width and horizontally stacked
+.flex-container--multi-50 {
+
+  > div {
+    @media (min-width: $screen-sm) {
+      width: 50%;
+    }
+  }
+}
+
+
+// Multiple rows, 1/3 width and left aligned
+.flex-container--multi-33 {
+
+  > div {
+    @media (min-width: $screen-xsm) {
+      width: 50%;
+    }
+    @media (min-width: $screen-sm) {
+      width: 33.333%;
+    }
+  }
+}
+
+
+// Multiple rows, 1/4 width and left aligned
+.flex-container--multi-25 {
+
+  > div {
+    @media (min-width: $screen-xsm) {
+      width: 50%;
+    }
+    @media (min-width: $screen-sm) {
+      width: 25%;
+    }
+  }
+}
+
+
+// Multiple rows, 1/5 width and left aligned
+.flex-container--multi-20 {
+
+  > div {
+    width: 33.3333%;
+    @media (min-width: $screen-sm) {
+      width: 20%;
+    }
+  }
+}
+
+
+// Multiple rows, 1/6 width and left aligned
+.flex-container--multi-16 {
+
+  > div {
+    width: 33.3333%;
+    @media (min-width: $screen-sm) {
+      width: 16%;
+    }
+  }
+}
+
+
+// single row, 35/65 split and left aligned
+.flex-container--multi-35-65 {
+
+  @media (min-width: $screen-sm) {
+    >:nth-child(odd) {
+      width: 35%;
+    }
+    >:nth-child(even) {
+      width: 65%;
+    }
+  }
+}
+
+
+// single row, 65/35 split and left aligned
+.flex-container--multi-65-35 {
+
+  @media (min-width: $screen-lg) {
+    >:nth-child(odd) {
+      width: 65%;
+    }
+    >:nth-child(even) {
+      width: 35%;
+    }
+  }
+}
+
+
+// single row, offset 35% allows for 65% body
+.flex-container--offset-35 {
+
+  @media (min-width: $screen-sm) {
+    > div {
+      margin-left: 35%;
+      width: 65%;
+    }
+  }
+}
+
+.theme-corporate {
+
+  .layout-container-heading {
+    margin-bottom: 5px;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .layout-container { padding: 60px 15px 110px; }
+
+  .flex-container > div { padding-bottom: 50px; }
+
+  .layout-container-body-copy {  max-width: 100%; }
+}
+
+
+.theme-ap {
+  .flex-container {
+    > div {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+}
