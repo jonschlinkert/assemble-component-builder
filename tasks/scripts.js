@@ -6,12 +6,12 @@ module.exports = function (assemble, config, browserSync){
   var concat = require('gulp-concat');
   var injectString = require('gulp-inject-string');
 
-  assemble.task('scripts', function (){
+  assemble.task('scripts.main', function (){
     return assemble.src([
-              './src/global/js/namespace.js',
-              './src/global/js/vendors/**/*.js',
-              './src/global/js/helpers/**/*.js',
-              './src/components/**/js/*.js'
+              'src/global/js/namespace.js',
+              'src/global/js/vendors/**/*.js',
+              'src/global/js/helpers/**/*.js',
+              'src/components/**/js/*.js'
             ])
             .pipe(eslint({
               parserOptions: {sourceType: 'script'}
@@ -24,8 +24,22 @@ module.exports = function (assemble, config, browserSync){
             .pipe(concat('main.js'))
             .pipe(babel({compact: true}))
             .pipe(injectString.prepend(config.versionString))
-            .pipe(assemble.dest('./dist/js/'))
-            .pipe(browserSync.stream());
+            .pipe(assemble.dest('dist/js/'));
   });
+
+  assemble.task('scripts.demo', function (){
+    return assemble.src('src/global/demo/js/*.js')
+            .pipe(concat('demo.js'))
+            .pipe(babel({compact: true}))
+            .pipe(injectString.prepend(config.versionString))
+            .pipe(assemble.dest('dist/js/'));
+  });
+
+  assemble.task('scripts', [
+    assemble.parallel([
+      'scripts.main',
+      'scripts.demo'
+    ])
+  ]);
 
 };
