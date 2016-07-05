@@ -5,6 +5,7 @@ module.exports = function (assemble, config, browserSync){
   var path = require('path');
   var del = require('del');
   var fs = require('fs');
+  var helpersFolder = '../src/global/html/helpers';
 
   navigationData = function(){
     var temp = {};
@@ -19,8 +20,8 @@ module.exports = function (assemble, config, browserSync){
       var title = path.basename(href, '.html').replace('-', ' ');
 
       // exclude the index page
-      if(title !== 'index') {
-        // use the temp object to sort by category
+      // use the temp object to sort by category
+      if(!view.data.isIndex) {
         temp[category] = temp[category] || [];
         temp[category].push({
           href: href,
@@ -37,29 +38,21 @@ module.exports = function (assemble, config, browserSync){
     return data;
   }
 
-  assemble.helper('svgicon', function(file){
-    var content = '';
-    var path = 'dist/svg-icons/'+file+'.svg';
-
-    try {
-      content = fs.readFileSync(path, 'utf8');
-    } catch (e) {
-      console.log('icon not found');
+  assemble.preRender( /./, function (view, next) {
+    // for isIndex,
+    // destination is now the root of dist/html
+    if(view.data.isIndex) {
+      view.path = path.join(view.base, view.basename);
     }
-
-    return content;
+    next(null, view);
   });
 
-  assemble.helper('pre', function(option){
-    var content = option.fn(this)
-      .replace(/{/g, '{{')
-      .replace(/}/g, '}}')
-      .replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
-         return '&#'+i.charCodeAt(0)+';';
-      });
 
-    return '<pre><code>'+content+'</code></pre>';
-  });
+  assemble.helper('dist', require(helpersFolder+'/dist.js'));
+
+  assemble.helper('svgicon', require(helpersFolder+'/svgicon.js'));
+
+  assemble.helper('pre', require(helpersFolder+'/pre.js'));
 
   assemble.task('html.load.icons', function (done){
     var data = {};
@@ -103,15 +96,7 @@ module.exports = function (assemble, config, browserSync){
   assemble.task('html.build', function(){
     return assemble.toStream('pages')
                   .pipe(assemble.renderFile())
-                  .pipe(rename(function (file) {
-                    // convert extension to html
-                    file.extname = '.html'
-                    // for index.html, change the destination
-                    // to dist/html
-                    if(file.basename == 'index') {
-                      file.dirname = '';
-                    }
-                  }))
+                  .pipe(rename({extname:'.html'}))
                   .pipe(assemble.dest('dist/html'));
   });
 
