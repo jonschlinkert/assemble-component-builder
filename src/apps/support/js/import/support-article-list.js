@@ -1,5 +1,5 @@
 import SupportApi from './support-api'
-import Helpers    from '../../../commun/apps.helpers'
+import Helpers    from '../../../common/apps.helpers'
 
 let SupportArticleList = (function() {
 	let helpers = new Helpers();

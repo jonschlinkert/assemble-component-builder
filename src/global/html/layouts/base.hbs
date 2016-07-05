@@ -2,8 +2,8 @@
 <html{{#if isDemo}} class="demo-html"{{/if}}>
   <head>
     <meta charset="utf-8">
-
     <title>{{pageTitle}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {{#if isIndex}}
     <link href="../css/main.css" media="all" rel="stylesheet" type="text/css" />
@@ -14,7 +14,7 @@
     {{/if}}
 
   </head>
-  <body>
+  <body class="theme-auspost">
 
     {% body %}
 
@@ -27,7 +27,9 @@
     <script src="../../../js/main.js"></script>
     <script src="../../../js/demo.js"></script>
     {{/if}}
-
+    {{#if jsInclude}}
+    <script src="../../../js/{{jsInclude}}.js"></script>
+    {{/if}}
   </body>
 </html>
 
