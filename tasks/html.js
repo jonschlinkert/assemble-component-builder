@@ -20,8 +20,8 @@ module.exports = function (assemble, config, browserSync){
       var title = path.basename(href, '.html').replace('-', ' ');
 
       // exclude the index page
-      if(title !== 'index') {
-        // use the temp object to sort by category
+      // use the temp object to sort by category
+      if(!view.data.isIndex) {
         temp[category] = temp[category] || [];
         temp[category].push({
           href: href,
