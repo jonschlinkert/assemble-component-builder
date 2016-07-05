@@ -5,7 +5,7 @@ module.exports = function (assemble, config, browserSync){
   var path = require('path');
   var del = require('del');
   var fs = require('fs');
-  var helpersFolder = '../src/global/html/helpers/';
+  var helpersFolder = '../src/global/html/helpers';
 
   navigationData = function(){
     var temp = {};
@@ -44,13 +44,15 @@ module.exports = function (assemble, config, browserSync){
     if(view.data.isIndex) {
       view.path = path.join(view.base, view.basename);
     }
-
     next(null, view);
   });
 
-  assemble.helper('svgicon', require(helpersFolder+'svgicon.js'));
 
-  assemble.helper('pre', require(helpersFolder+'pre.js'));
+  assemble.helper('dist', require(helpersFolder+'/dist.js'));
+
+  assemble.helper('svgicon', require(helpersFolder+'/svgicon.js'));
+
+  assemble.helper('pre', require(helpersFolder+'/pre.js'));
 
   assemble.task('html.load.icons', function (done){
     var data = {};
