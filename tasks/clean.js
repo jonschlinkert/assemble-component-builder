@@ -6,7 +6,7 @@ module.exports = function (assemble, config, browserSync){
     return del('dist/');
   });
 
-  assemble.task('clean.templates', function(done){
+  assemble.task('clean.templates', function(){
     return del('src/apps/**/templates.js');
   });
 
