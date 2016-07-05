@@ -5,6 +5,7 @@ module.exports = function (assemble, config, browserSync){
   var path = require('path');
   var del = require('del');
   var fs = require('fs');
+  var helpersFolder = '../src/global/html/helpers/';
 
   navigationData = function(){
     var temp = {};
@@ -37,29 +38,9 @@ module.exports = function (assemble, config, browserSync){
     return data;
   }
 
-  assemble.helper('svgicon', function(file){
-    var content = '';
-    var path = 'dist/svg-icons/'+file+'.svg';
+  assemble.helper('svgicon', require(helpersFolder+'svgicon.js'));
 
-    try {
-      content = fs.readFileSync(path, 'utf8');
-    } catch (e) {
-      console.log('icon not found');
-    }
-
-    return content;
-  });
-
-  assemble.helper('pre', function(option){
-    var content = option.fn(this)
-      .replace(/{/g, '{{')
-      .replace(/}/g, '}}')
-      .replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
-         return '&#'+i.charCodeAt(0)+';';
-      });
-
-    return '<pre><code>'+content+'</code></pre>';
-  });
+  assemble.helper('pre', require(helpersFolder+'pre.js'));
 
   assemble.task('html.load.icons', function (done){
     var data = {};
