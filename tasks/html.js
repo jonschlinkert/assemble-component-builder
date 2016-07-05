@@ -38,6 +38,16 @@ module.exports = function (assemble, config, browserSync){
     return data;
   }
 
+  assemble.preRender( /./, function (view, next) {
+    // for isIndex,
+    // destination is now the root of dist/html
+    if(view.data.isIndex) {
+      view.path = path.join(view.base, view.basename);
+    }
+
+    next(null, view);
+  });
+
   assemble.helper('svgicon', require(helpersFolder+'svgicon.js'));
 
   assemble.helper('pre', require(helpersFolder+'pre.js'));
@@ -84,15 +94,7 @@ module.exports = function (assemble, config, browserSync){
   assemble.task('html.build', function(){
     return assemble.toStream('pages')
                   .pipe(assemble.renderFile())
-                  .pipe(rename(function (file) {
-                    // convert extension to html
-                    file.extname = '.html'
-                    // for index.html, change the destination
-                    // to dist/html
-                    if(file.basename == 'index') {
-                      file.dirname = '';
-                    }
-                  }))
+                  .pipe(rename({extname:'.html'}))
                   .pipe(assemble.dest('dist/html'));
   });
 
