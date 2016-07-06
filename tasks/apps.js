@@ -48,10 +48,7 @@ module.exports = function (assemble, config, browserSync){
 
   assemble.task('apps.scripts', function(done){
 
-    assemble.src([
-            'src/apps/**/*.js',
-            '!src/apps/**/templates/*js'
-          ])
+    assemble.src('src/apps/**/*.js')
           .pipe(eslint())
           .pipe(eslint.formatEach())
           .pipe(eslint.failAfterError())

@@ -2,32 +2,22 @@
 <html{{#if isDemo}} class="demo-html"{{/if}}>
   <head>
     <meta charset="utf-8">
-
     <title>{{pageTitle}}</title>
-
-    {{#if isIndex}}
-    <link href="../css/main.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="../css/demo.css" media="all" rel="stylesheet" type="text/css" />
-    {{else}}
-    <link href="../../../css/main.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="../../../css/demo.css" media="all" rel="stylesheet" type="text/css" />
-    {{/if}}
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{dist}}/css/main.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="{{dist}}/css/demo.css" media="all" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body class="theme-{{#if theme}}{{theme}}{{else}}auspost{{/if}}">
+
 
     {% body %}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-    {{#if isIndex}}
-    <script src="../js/main.js"></script>
-    <script src="../js/demo.js"></script>
-    {{else}}
-    <script src="../../../js/main.js"></script>
-    <script src="../../../js/demo.js"></script>
+    <script src="{{dist}}/js/main.js"></script>
+    <script src="{{dist}}/js/demo.js"></script>
+    {{#if jsInclude}}
+    <script src="{{dist}}/js/{{jsInclude}}.js"></script>
     {{/if}}
-
   </body>
 </html>
 
