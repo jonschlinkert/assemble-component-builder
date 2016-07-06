@@ -1,0 +1,31 @@
+
+---
+layout: base
+pageTitle: <%name%>
+jsInclude: <%name%>
+---
+
+{{!--
+
+  You can document your code by using the custom helper pre.
+  If you want to illustrate a variable, use one curly brace
+  instead of two. handlebars won't compile it and the pre helper
+  will return a double curly brace:
+  > {{#pre}}<h1>{title}</h1>{{/pre}}
+
+  This build is including handlebars-helpers
+  you can find more informations here :
+  > https://github.com/assemble/handlebars-helpers
+
+  We also have a custom helper to inline all svg icons register
+  in src/global/svg-icons :
+  > {{svgicon 'icon-foo'}}
+  Note that icon are expected to be wrapped in a span
+
+--}}
+
+<h1><%name%></h1>
+
+<section class="<%name%>--container">
+  <p>This content gets replaced once the JavaScript runs.</p>
+</section>

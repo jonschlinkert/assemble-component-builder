@@ -84,6 +84,7 @@ module.exports = function (assemble, config, browserSync){
       'src/**/*.hbs',
       '!src/**/layouts/*.hbs',
       '!src/**/partials/*.hbs',
+      '!src/**/demo-app/**/*.hbs',
       '!src/**/demo-component/**/*.hbs',
       '!src/**/templates/**/*.hbs'
     ]);
