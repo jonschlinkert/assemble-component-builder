@@ -10,9 +10,17 @@ module.exports = function (assemble, config, browserSync){
                   .pipe(assemble.dest('./dist/svg-icons/'));
   });
 
+  assemble.task('svg.illustrations', function(){
+    return assemble.src('./src/global/svg-illustrations/*.svg')
+                  .pipe(svgo())
+                  .pipe(rename({dirname: ''}))
+                  .pipe(assemble.dest('./dist/svg-illustrations/'));
+  });
+
   assemble.task('svg',
     assemble.parallel([
-      'svg.icons'
+      'svg.icons',
+      'svg.illustrations'
     ])
   );
 
