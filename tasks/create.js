@@ -3,18 +3,17 @@ module.exports = function (assemble, config, browserSync){
   var rename = require('gulp-rename');
   var replace = require('gulp-replace');
 
-  assemble.task('create', function(){
-    if (typeof assemble.options.component !== 'undefined') {
-
-      function camelCase(string) {
-        return string.split(/-| /).map(function(str, i){
-          if (i!==0) {
-            return str.charAt(0).toUpperCase() + str.slice(1);
-          }
-          return str;
-        }).join('');
+  function camelCase(string) {
+    return string.split(/-| /).map(function(str, i){
+      if (i!==0) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
       }
+      return str;
+    }).join('');
+  }
 
+  assemble.task('create', function() {
+    if (typeof assemble.options.component !== 'undefined') {
       var name = assemble.options.component;
       var nameAll = name.replace(/ /g, '-');
       var nameJs = camelCase(name);
@@ -31,16 +30,6 @@ module.exports = function (assemble, config, browserSync){
     }
 
     if (typeof assemble.options.app !== 'undefined') {
-
-      function camelCase(string) {
-        return string.split(/-| /).map(function(str, i){
-          if (i!==0) {
-            return str.charAt(0).toUpperCase() + str.slice(1);
-          }
-          return str;
-        }).join('');
-      }
-
       var name = assemble.options.app;
       var nameAll = name.replace(/ /g, '-');
       var nameJs = camelCase(name);

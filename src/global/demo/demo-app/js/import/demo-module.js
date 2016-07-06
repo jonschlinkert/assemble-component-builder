@@ -9,7 +9,7 @@ let Demo = (function() {
   // a private function.
   function _insertTemplate() {
     // compile and insert the html content.
-    let htmlContent = templates.<%name%>();
+    let htmlContent = templates.<%name:js%>();
     $container.innerHTML = htmlContent;
   };
 
