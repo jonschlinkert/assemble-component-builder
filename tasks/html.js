@@ -50,7 +50,7 @@ module.exports = function (assemble, config, browserSync){
 
   assemble.helper('dist', require(helpersFolder+'/dist.js'));
 
-  assemble.helper('svgicon', require(helpersFolder+'/svgicon.js'));
+  assemble.helper('inlinesvg', require(helpersFolder+'/inlinesvg.js'));
 
   assemble.helper('pre', require(helpersFolder+'/pre.js'));
 
