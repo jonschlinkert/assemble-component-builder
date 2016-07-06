@@ -29,6 +29,33 @@ module.exports = function (assemble, config, browserSync){
                     }))
                     .pipe(assemble.dest('src/components/'+ nameAll));
     }
+
+    if (typeof assemble.options.app !== 'undefined') {
+
+      function camelCase(string) {
+        return string.split(/-| /).map(function(str, i){
+          if (i!==0) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+          }
+          return str;
+        }).join('');
+      }
+
+      var name = assemble.options.app;
+      var nameAll = name.replace(/ /g, '-');
+      var nameJs = camelCase(name);
+
+      return assemble.src('src/global/demo/demo-app/**/*')
+                    .pipe(replace(/<%name%>/g, nameAll))
+                    .pipe(rename(function(path){
+                      console.log(path);
+                      if (path.extname !== '' && path.dirname !== 'js/import' && path.dirname !== 'templates') {
+                        path.basename = nameAll;
+                      }
+                    }))
+                    .pipe(assemble.dest('src/apps/'+ nameAll));
+    }
+
   });
 };
 

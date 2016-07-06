@@ -1,0 +1,30 @@
+
+---
+layout: base
+pageTitle: <%name%>
+jsInclude: <%name%>
+---
+
+{{!--
+
+  To load a partial, simply use :
+  > {{> partialName }}
+
+  If you are using a data file for your component,
+  refer to that collection by using the name of your data file
+  as second parameter :
+  > {{> partialName dataFileName }}
+
+  You can document your code by using the custom helper pre.
+  If you want to illustrate a variable, use one curly brace
+  instead of two. handlebars won't compile it and the pre helper
+  will return a double curly brace:
+  > {{#pre}}<h1>{title}</h1>{{/pre}}
+
+--}}
+
+<h1><%name%></h1>
+
+<section class="<%name%>--container">
+  <p>This content gets replaced once the JavaScript runs.</p>
+</section>
