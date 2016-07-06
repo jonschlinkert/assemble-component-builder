@@ -6,12 +6,21 @@ module.exports = function (assemble, config, browserSync){
   var moduleImporter = require('sass-module-importer');
   var notify = require('gulp-notify');
   var autoprefixer = require('gulp-autoprefixer');
+  var sassLint = require('gulp-sass-lint');
 
   assemble.task('styles', function (){
     return assemble.src([
                     'src/global/sass/*.scss',
                     'src/global/demo/sass/*.scss'
                   ])
+                  .pipe(sassLint({
+                    options: {
+                      formatter: 'stylish'
+                    },
+                    configFile: '.sass-lint.yml'
+                  }))
+                  .pipe(sassLint.format())
+                  .pipe(sassLint.failOnError())
                   .pipe(injectString.prepend(config.versionString))
                   .pipe(sourcemaps.init())
                   .pipe(sass({ style: 'expanded', importer: moduleImporter() }))
