@@ -17,7 +17,7 @@
     "url": "https://github.com/ie/fe-assemble/issues"
   },
   "devDependencies": {
-    "assemble": "0.15.0",
+    "assemble": "^0.23.0",
     "autoprefixer": "^6.7.7",
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
