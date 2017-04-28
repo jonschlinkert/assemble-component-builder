@@ -1,0 +1,5 @@
+dist/**/*.css
+src/apps/currency-converter/sass/vendor/**/*.scss
+src/bundles/_archive/**/*.scss
+src/global/demo/**/*.scss
+src/global/sass/vendor/**/*.scss

@@ -1,0 +1,7 @@
+<script src="{{dist}}/js/scripts.js"></script>
+{{#if (isArray jsInclude)}}
+{{#each ../jsInclude}}
+<script src="{{dist}}/js/{{this}}{{#ifTask 'aem'}}.min{{/ifTask}}.js"></script>
+{{/each}}
+{{/if}}
+

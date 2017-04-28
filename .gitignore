@@ -1,0 +1,7 @@
+/dist
+/export
+/node_modules
+*.iml
+templates.js
+/test/results
+.DS_Store

@@ -1,0 +1,7 @@
+<link href="{{dist}}/css/app.css" media="all" rel="stylesheet" type="text/css" />
+{{#if (isArray cssInclude)}}
+{{#each ../cssInclude}}
+<link href="{{dist}}/css/{{this}}.css" media="all" rel="stylesheet" type="text/css" />
+{{/each}}
+{{/if}}
+
