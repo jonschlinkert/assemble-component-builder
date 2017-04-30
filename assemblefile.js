@@ -1,59 +1,39 @@
 
-/*
- * Require
- * -------------------- */
 var assemble = require('assemble')();
 var browserSync = require('browser-sync').create();
 var fs = require('fs');
+var rename = require('gulp-rename');
 
-/*
- * Global config object
- * -------------------- */
-var config = {};
-config.taskPath = './tasks/';
-config.taskList = fs.readdirSync(config.taskPath);
-config.package = JSON.parse(fs.readFileSync('package.json'));
-config.versionString = '/*! '+ config.package.name +' */\n' +
-                       '/*! Version: '+ config.package.version +' */\n' +
-                       '/*! Created: ' + new Date() + ' */\n';
-config.browserList = {
-  browsers: [
-    'IE >= 11',
-    'Edge >= 13',
-    'Chrome >= 50',
-    'Firefox >= 47',
-    'Safari >= 9',
-    'iOS >= 9',
-    'Android >= 4.4',
-    'Samsung >= 4'
-  ]
-};
+assemble.helpers(require('handlebars-helpers')());
 
-/*
- * Register tasks
- * -------------------- */
-config.taskList.forEach(function (taskFile) {
-  require(config.taskPath + taskFile)(assemble, config, browserSync);
+assemble.task('load', function(done){
+  assemble.partials([
+    'src/**/partials/*.hbs'
+  ]);
+  assemble.layouts([
+    'src/**/layouts/*.hbs'
+  ]);
+  assemble.data([
+    'src/**/data/*.json'
+  ]);
+  assemble.pages([
+    'src/**/*.hbs',
+    '!src/**/layouts/*.hbs',
+    '!src/**/partials/*.hbs'
+  ]);
+  done();
 });
 
-/*
- * Tasks
- * -------------------- */
+assemble.task('build', function(){
+  return assemble.toStream('pages')
+                .pipe(assemble.renderFile())
+                .pipe(rename({extname:'.html'}))
+                .pipe(assemble.dest('dist/html'));
+});
 
 assemble.task('default', [
-    'clean'
-  ],
-  assemble.parallel([
-    'styles',
-    'scripts',
-    'html'
-  ]), [
-    'browserSync'
-  ]
-);
-
-/*
- * Exports the instance
- * -------------------- */
+  'load',
+  'build'
+]);
 
 module.exports = assemble;
