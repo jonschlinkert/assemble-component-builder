@@ -17,26 +17,6 @@
     "url": "https://github.com/ie/fe-assemble/issues"
   },
   "devDependencies": {
-    "assemble": "^0.23.0",
-    "autoprefixer": "^6.7.7",
-    "browser-sync": "^2.18.8",
-    "del": "^2.2.2",
-    "fs": "0.0.1-security",
-    "gulp-babel": "^6.1.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-inject-string": "^1.1.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-postcss": "^6.4.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "handlebars-helpers": "^0.8.2",
-    "path": "^0.12.7",
-    "postcss-reporter": "^3.0.0",
-    "postcss-scss": "^0.4.1",
-    "stylelint": "^7.10.1",
-    "stylelint-declaration-strict-value": "^1.0.3",
-    "stylelint-scss": "^1.4.4"
+    "assemble": "^0.23.0"
   }
 }
